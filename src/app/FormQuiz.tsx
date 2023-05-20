@@ -40,17 +40,23 @@ const FormQuiz: React.FC = () => {
 			>
 				<Input placeholder={'Question 1'} showCount maxLength={255}/>
 			</Form.Item>
-			<Form.Item name="ans1" style={{display: 'flex'}}>
-				<Input prefix="A" showCount maxLength={75}/>
-				<Button size={'small'}><MinusOutlined/></Button>
+			<Form.Item name="ans1">
+				<div style={{display: 'flex',alignItems: 'center'}}>
+					<Input prefix="A" showCount maxLength={75}/>
+					<Button size={'small'} style={{marginLeft: '10px',flexShrink: 0}}><MinusOutlined/></Button>
+				</div>
 			</Form.Item>
-			<Form.Item name="ans2" style={{display: 'flex'}}>
-				<Input prefix="B" showCount maxLength={75}/>
-				<Button size={'small'}><MinusOutlined/></Button>
+			<Form.Item name="ans2">
+				<div style={{display: 'flex',alignItems: 'center'}}>
+					<Input prefix="B" showCount maxLength={75}/>
+					<Button size={'small'} style={{marginLeft: '10px',flexShrink: 0}}><MinusOutlined/></Button>
+				</div>
 			</Form.Item>
-			<Form.Item name="ans3" style={{display: 'flex'}}>
-				<Input prefix="C" showCount maxLength={75}/>
-				<Button size={'small'}><MinusOutlined/></Button>
+			<Form.Item name="ans3">
+				<div style={{display: 'flex',alignItems: 'center'}}>
+					<Input prefix="C" showCount maxLength={75}/>
+					<Button size={'small'} style={{marginLeft: '10px',flexShrink: 0}}><MinusOutlined/></Button>
+				</div>
 			</Form.Item>
 			<div style={{textAlign: 'right', marginBottom: "20px"}}>
 				<Button size={'small'}><PlusOutlined /></Button>
