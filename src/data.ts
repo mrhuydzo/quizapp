@@ -4,20 +4,31 @@ export interface DataType {
 	testDuration: number;
 	testWeight: number;
 	totalPoint: number;
-	// questions: {};
-	// questionTitle: string;
-	// answer: [];
-	// answerCorrect: string;
-	// point: number;
+	questions: Questions [];
+}
+
+interface Questions {
+	questionTitle: string;
+	answer: string [];
+	answerCorrect: string;
+	point: number;
 }
 
 //
-export const data: DataType[] = [
-	{
-		id: 1,
-		title: 'test1',
-		testDuration: 0,
-		testWeight: 0,
-		totalPoint: 0,
-	}
-]
+export const data: DataType[] = []
+
+export const creatQuestion = (quest: DataType) => {
+	data.push({...quest, id: data.length});
+	console.log(quest)
+}
+
+export const getQuestion = () => {
+	return [...data]
+}
+
+export const PREFIX = {
+	0: 'A',
+	1: 'B',
+	2: 'C',
+	3: 'D',
+}
